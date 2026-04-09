@@ -16,6 +16,10 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
+          cache: 'gradle'
+          cache-dependency-path: |
+            **/*.gradle*
+            **/gradle-wrapper.properties
 
       - name: gradlew 실행 권한 부여
         run: chmod +x gradlew
